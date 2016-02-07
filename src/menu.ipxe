@@ -51,7 +51,8 @@ item --gap Tools:
 item utils ${space} Utilities
 item shell ${space} iPXE shell
 item netinfo ${space} Network card info
-item sig_check ${space} Signature Checks [ enabled: ${sigs_enabled} ]
+iseq ${sigs_enabled} true && set sigs_status ${fg_gre}enabled${fg_def} || set sigs_status ${fg_red}disabled${fg_def}
+item sig_check ${space} Signature Checks [ ${sigs_status} ]
 isset ${github_user} && item --gap Custom Menu: ||
 isset ${github_user} && item nbxyz-custom ${space} ${github_user}'s Custom Menu ||
 isset ${menu} && set timeout 0 || set timeout 300000
