@@ -20,6 +20,7 @@ item antergos ${space} Antergos
 item architect ${space} Architect Linux
 item coreos ${space} CoreOS
 item gentoo ${space} Gentoo Linux
+item nixos ${space} NixOS
 item rancheros ${space} RancherOS
 item scientific ${space} Scientific
 item slackware ${space} Slackware

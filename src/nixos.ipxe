@@ -1,0 +1,22 @@
+#!ipxe
+
+# NixOS
+# http://nixos.org/
+
+:nixos_menu
+menu NixOS
+item nixos ${space} NixOS
+choose nixos_version || goto nixos_exit
+goto nixos
+echo ${cls}
+
+:nixos
+kernel http://hydra.nixos.org/build/38603078/download/1/bzImage
+initrd http://hydra.nixos.org/build/38603078/download/2/initrd
+imgargs bzImage init=/nix/store/9kl7ms0g27qgfhl7pfaxjz284829ckic-nixos-system-nixos-16.09pre88601.bab8a2e/init loglevel=7
+#imgargs bzImage init=/nix/var/nix/profiles/system/init loglevel=7
+boot
+
+:nixos_exit
+clear menu
+exit 0
