@@ -1,4 +1,4 @@
-## netboot.xyz
+## WebairNetBoot
 
 [![Build Status](https://travis-ci.org/antonym/netboot.xyz.svg?branch=master)](https://travis-ci.org/antonym/netboot.xyz)
 
